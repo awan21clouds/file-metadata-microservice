@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title File Metadata
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet", integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==", crossorigin="anonymous")
+  body
+    main.container
+      
+      
+      form.form-inline(action="/result", method="post", enctype="multipart/form-data")
+        .form-group: input(type="file", name="file", required)
+        input.btn.btn-sm.btn-primary(type="submit", value="Upload")
+      
+      h4(style="margin-top:50px") Response format
+      p JSON object in the form:
+      pre.
+        {
+          "name": "todolist.txt",
+          "size": 9001
+        }
+      p Size is in bytes.
+      
+      
+      
